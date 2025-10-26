@@ -1,14 +1,19 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
+import path from 'path'
 
-// https://vitejs.dev/config/
 export default defineConfig({
+  root: '.', // 👈 assure que le build part bien de la racine
   plugins: [react()],
-  root: '.', // 👈 garantit que le build part bien de la racine
   build: {
-    outDir: 'dist', // sortie standard
+    outDir: 'dist', // dossier de sortie
     rollupOptions: {
-      input: './index.html', // 👈 force Vite à chercher ton index ici
+      input: path.resolve(__dirname, 'index.html'), // 👈 forcer Vite à prendre ce fichier
+    },
+  },
+  resolve: {
+    alias: {
+      '@': path.resolve(__dirname, './src'),
     },
   },
 })
