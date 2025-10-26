@@ -3,18 +3,9 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "start": "npx serve -s dist -l $PORT"
-  },
-  "dependencies": {
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "start": "npx serve -s . -l $PORT"
   },
   "devDependencies": {
-    "vite": "^5.0.0",
-    "@vitejs/plugin-react": "^4.2.0",
-    "typescript": "^5.4.0",
     "serve": "^14.2.3"
   }
 }
