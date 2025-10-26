@@ -1,10 +1,10 @@
 import React, { useState, useMemo, useCallback } from 'react';
 import type { Place } from './types';
-import Header from './components/Header';
-import ResultsDisplay from './components/ResultsDisplay';
-import FilterPanel from './components/FilterPanel';
-import ItineraryPanel from './components/ItineraryPanel';
-import { allPlaces } from './data/places';
+import Header from 'Header';
+import ResultsDisplay from 'ResultsDisplay';
+import FilterPanel from 'FilterPanel';
+import ItineraryPanel from 'ItineraryPanel';
+import { allPlaces } from 'places';
 
 const allCategories = [...new Set(allPlaces.map(p => p.category))].sort();
 const defaultStartPoint = allPlaces.find(p => p.name === 'Hôtel Leon D’Oro');
