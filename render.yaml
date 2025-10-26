@@ -3,7 +3,7 @@ services:
     name: notreprague
     env: node
     buildCommand: npm install && npm run build
-    startCommand: npm run preview
+    startCommand: npm run start
     staticPublishPath: dist
     plan: free
     branch: main
