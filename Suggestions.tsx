@@ -1,6 +1,6 @@
 import React, { useMemo } from 'react';
 import type { Place } from '../types';
-import { getDistance } from '../utils/geo';
+import { getDistance } from './geo';
 
 interface SuggestionsProps {
   from: Place;
