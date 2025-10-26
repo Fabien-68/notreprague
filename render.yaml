@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: notreprague
+    env: node
+    buildCommand: npm install && npm run build
+    startCommand: npm run preview
+    plan: free
+    branch: main
+    autoDeploy: true
