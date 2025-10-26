@@ -1,19 +1,14 @@
-import { defineConfig } from 'vite';
-import react from '@vitejs/plugin-react';
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
 
-// ✅ Configuration propre pour Render (build statique)
+// https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
+  root: '.', // 👈 garantit que le build part bien de la racine
   build: {
-    outDir: 'dist',
+    outDir: 'dist', // sortie standard
+    rollupOptions: {
+      input: './index.html', // 👈 force Vite à chercher ton index ici
+    },
   },
-  server: {
-    port: 3000,
-    host: '0.0.0.0',
-  },
-  preview: {
-    port: 8080,
-    allowedHosts: ['notreprague.onrender.com'], // autorisation Render
-  },
-  base: './'
-});
+})
