@@ -2,13 +2,7 @@ services:
   - type: web
     name: notreprague
     env: node
-    buildCommand: npm install && npm run build
     startCommand: npm run start
-    staticPublishPath: dist
-    rootDir: .          # 👈 indique à Render que le projet démarre à la racine
-    buildFilter:
-      paths:
-        - .             # 👈 inclut tous les fichiers racine dans le build
     plan: free
     branch: main
     autoDeploy: true
