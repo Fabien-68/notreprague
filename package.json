@@ -1,0 +1,13 @@
+{
+  "name": "prague-amour",
+  "version": "1.0.0",
+  "description": "Notre guide personnel pour une exploration unique de Prague. Par Amanda & Fabien.",
+  "type": "module",
+  "scripts": {
+    "start": "serve ."
+  },
+  "devDependencies": {
+    "serve": "^14.2.3",
+    "typescript": "^5.4.5"
+  }
+}
